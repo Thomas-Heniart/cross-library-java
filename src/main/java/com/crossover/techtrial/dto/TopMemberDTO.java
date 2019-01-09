@@ -1,72 +1,67 @@
 /**
- * 
+ *
  */
 package com.crossover.techtrial.dto;
 
+import java.io.Serializable;
+
 /**
  * @author crossover
- *
  */
-public class TopMemberDTO {
-  
-  /**
-   * Constructor for TopMemberDTO
-   * @param memberId
-   * @param name
-   * @param email
-   * @param bookCount
-   */
-  public TopMemberDTO(Long memberId,
-      String name, 
-      String email, 
-      Integer bookCount) {
-    this.name = name;
-    this.email = email;
-    this.memberId = memberId;
-    this.bookCount = bookCount;
-  }
-  
-  public TopMemberDTO() {
-    
-  }
-  
-  private Long memberId;
-  
-  private String name;
-  
-  private String email;
-  
-  private Integer bookCount;
+public class TopMemberDTO implements Serializable {
 
-  public Long getMemberId() {
-    return memberId;
-  }
+    private static final long serialVersionUID = -5241781253380015253L;
 
-  public void setMemberId(Long memberId) {
-    this.memberId = memberId;
-  }
+    /**
+     * Constructor for TopMemberDTO
+     */
+    public TopMemberDTO(final Long memberId,
+            final String name,
+            final String email,
+            final Integer bookCount) {
+        this.name = name;
+        this.email = email;
+        this.memberId = memberId;
+        this.bookCount = bookCount;
+    }
 
-  public String getName() {
-    return name;
-  }
+    private Long memberId;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    private String name;
 
-  public String getEmail() {
-    return email;
-  }
+    private String email;
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    private Integer bookCount;
 
-  public Integer getBookCount() {
-    return bookCount;
-  }
+    public Long getMemberId() {
+        return memberId;
+    }
 
-  public void setBookCount(Integer bookCount) {
-    this.bookCount = bookCount;
-  }
+    public void setMemberId(final Long memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
+    public Integer getBookCount() {
+        return bookCount;
+    }
+
+    public void setBookCount(final Integer bookCount) {
+        this.bookCount = bookCount;
+    }
 }

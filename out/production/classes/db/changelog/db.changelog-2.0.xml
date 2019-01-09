@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="thomas_heniart" id="01082019_change_set">
+        <dropForeignKeyConstraint baseTableName="transaction" constraintName="fk_transaction_book"/>
+        <dropForeignKeyConstraint baseTableName="transaction" constraintName="fk_transaction_member"/>
+        <addForeignKeyConstraint baseColumnNames="book_id"
+            baseTableName="transaction"
+            constraintName="fk_transaction_book"
+            onDelete="NO ACTION"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="book"/>
+        <addForeignKeyConstraint baseColumnNames="member_id"
+            baseTableName="transaction"
+            constraintName="fk_transaction_member"
+            onDelete="NO ACTION"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="member"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.crossover.techtrial.model;
 
@@ -11,85 +11,83 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
 /**
  * @author kshah
- *
  */
 @Entity
-@Table(name="transaction")
+@Table(name = "transaction")
 public class Transaction implements Serializable {
 
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 8951221480021840448L;
-  
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  Long id;
-  
-  @OneToOne
-  @JoinColumn(name = "book_id", referencedColumnName = "id")
-  Book book;
-  
-  @OneToOne
-  @JoinColumn(name="member_id", referencedColumnName="id")
-  Member member;
-  //Date and time of issuance of this book
-  @Column(name="date_of_issue")
-  LocalDateTime dateOfIssue;
-  
-  //Date and time of return of this book
-  @Column(name="date_of_return")
-  LocalDateTime dateOfReturn;
+    private static final long serialVersionUID = 8951221480021840448L;
 
-  public Long getId() {
-    return id;
-  }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    @ManyToOne
+    @JoinColumn(name = "book_id", referencedColumnName = "id")
+    private Book book;
 
-  public Book getBook() {
-    return book;
-  }
+    @ManyToOne
+    @JoinColumn(name = "member_id", referencedColumnName = "id")
+    private Member member;
 
-  public void setBook(Book book) {
-    this.book = book;
-  }
+    //Date and time of issuance of this book
+    @Column(name = "date_of_issue")
+    private LocalDateTime dateOfIssue;
 
-  public Member getMember() {
-    return member;
-  }
+    //Date and time of return of this book
+    @Column(name = "date_of_return")
+    private LocalDateTime dateOfReturn;
 
-  public void setMember(Member member) {
-    this.member = member;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public LocalDateTime getDateOfIssue() {
-    return dateOfIssue;
-  }
+    public void setId(final Long id) {
+        this.id = id;
+    }
 
-  public void setDateOfIssue(LocalDateTime dateOfIssue) {
-    this.dateOfIssue = dateOfIssue;
-  }
+    public Book getBook() {
+        return book;
+    }
 
-  public LocalDateTime getDateOfReturn() {
-    return dateOfReturn;
-  }
+    public void setBook(final Book book) {
+        this.book = book;
+    }
 
-  public void setDateOfReturn(LocalDateTime dateOfReturn) {
-    this.dateOfReturn = dateOfReturn;
-  }
+    public Member getMember() {
+        return member;
+    }
 
-  @Override
-  public String toString() {
-    return "Transaction [id=" + id + ", book=" + book + ", member=" + member + ", dateOfIssue=" + dateOfIssue + ", dateOfReturn=" + dateOfReturn + "]";
-  }
+    public void setMember(final Member member) {
+        this.member = member;
+    }
+
+    public LocalDateTime getDateOfIssue() {
+        return dateOfIssue;
+    }
+
+    public void setDateOfIssue(final LocalDateTime dateOfIssue) {
+        this.dateOfIssue = dateOfIssue;
+    }
+
+    public LocalDateTime getDateOfReturn() {
+        return dateOfReturn;
+    }
+
+    public void setDateOfReturn(final LocalDateTime dateOfReturn) {
+        this.dateOfReturn = dateOfReturn;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction [id=" + id + ", book=" + book + ", member=" + member + ", dateOfIssue=" + dateOfIssue
+                + ", dateOfReturn=" + dateOfReturn + "]";
+    }
 
 }

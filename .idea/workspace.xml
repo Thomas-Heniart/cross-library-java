@@ -1,0 +1,1795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f479d21-7ce5-4825-8e73-0475fb0e2b9a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TransactionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyIssuedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyReturnedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/InvalidTimeRangeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TooManyBooksIssuedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TransactionNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/factory/TransactionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/BookControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/TransactionControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/factory/TransactionFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/BookServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/MemberServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TopMemberServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TransactionServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/util/HttpEntityHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TopMemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TopMemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/MemberControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/MemberControllerTest.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cross_library_java$MemberServiceImplTest.ic" NAME="MemberServiceImplTest Coverage Results" MODIFIED="1546950458708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.crossover.techtrial.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cross_library_java$com_crossover_techtrial_in_cross_library_java_test.ic" NAME="com.crossover.techtrial in cross-library-java_test Coverage Results" MODIFIED="1547025573380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.crossover.techtrial.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cross_library_java$MemberControllerTest.ic" NAME="MemberControllerTest Coverage Results" MODIFIED="1546951929073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.crossover.techtrial.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cross_library_java$All_in_cross_library_java_test.ic" NAME="All in cross-library-java_test Coverage Results" MODIFIED="1546949460813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cross_library_java$com_in_cross_library_java_test.ic" NAME="com in cross-library-java_test Coverage Results" MODIFIED="1546970312164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="TransactionController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/TransactionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TransactionDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionServiceImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TransactionServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2790">
+              <caret line="186" column="35" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Singleton" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/com/crossover/techtrial/query</dir>
+      <dir>$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.3" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="cross-library-java" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="cross-library-java" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Verifies code coverage metrics based on specified rules for the test task." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jacocoTestCoverageVerification" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="reportCobertura" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles an executable jar archive containing the main classes and their dependencies." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse classpath file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'cross-library-java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependency management declared in root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyManagement" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse JDT settings file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse project file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'cross-library-java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Cleans all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'cross-library-java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a Spring Boot application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRun" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates code coverage report for the test task." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jacocoTestReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="reportJacoco" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="reportTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'cross-library-java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4632863262000" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3200816834" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="61580767" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/2.0.2.RELEASE/d283fee446dd4fb54100c034fe8cecfa0a869498/spring-boot-gradle-plugin-2.0.2.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/2.0.2.RELEASE/b35e0fcf1acca8c38899af0f06269955f1bf553c/spring-boot-gradle-plugin-2.0.2.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ksoichiro/gradle-console-reporter/0.5.0/35404b6df83b97f507d39c2743972a0355aa181d/gradle-console-reporter-0.5.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ksoichiro/gradle-console-reporter/0.5.0/ce052a5043f1560b4b61876edd04b14993f1f42e/gradle-console-reporter-0.5.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/2.0.2.RELEASE/fb36a0b30c22e3f260e3dad1c54a12c181c36228/spring-boot-loader-tools-2.0.2.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/2.0.2.RELEASE/f1460752eda55972571a9651fcdfcb6cceef183d/spring-boot-loader-tools-2.0.2.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/e9f2761e13da4228793ee5fcaa983889e68c4c61/dependency-management-plugin-1.0.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/3589987a66349bdc10b18c6c4a5463ffd084c908/dependency-management-plugin-1.0.5.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.14/43a23e357fa7b187c261520914c0b001ea1a62a2/commons-compress-1.14-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.14/7b18320d668ab080758bf5383d6d8fcf750babce/commons-compress-1.14.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.6.RELEASE/86ca74938ace10c2aff781b6d93888435baf7474/spring-core-5.0.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.6.RELEASE/984a52455b1be596b7f1a29f62d21d2f483eb764/spring-core-5.0.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.6.RELEASE/ca475012ae43a0745d3cfc0bae4e52de0fddc29f/spring-jcl-5.0.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.6.RELEASE/295ee4e8657e9c1fd327735c01d5fbce339cc44d/spring-jcl-5.0.6.RELEASE.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="cross-library-java" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-native-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-runtime-api-info-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-wrapper-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-logging-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-installation-beacon-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-base-services-groovy-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-model-core-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-core-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/ant-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-build-cache-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-kotlin-dsl-tooling-builders-0.12.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-process-services-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-cli-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-docs-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-persistent-cache-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/ant-launcher-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-base-services-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-build-option-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-messaging-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-jvm-services-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-launcher-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-kotlin-dsl-0.12.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-resources-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-model-groovy-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-core-api-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-kotlin-dsl-tooling-models-0.12.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/gradle-tooling-api-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-platform-native-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-jacoco-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-plugins-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-build-comparison-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-language-native-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-version-control-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-javascript-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-ide-play-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-language-scala-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-tooling-api-builders-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-announce-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-plugin-use-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-platform-base-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-language-jvm-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-ear-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-publish-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-composite-builds-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-dependency-management-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-testing-native-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-build-cache-http-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-workers-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-plugin-development-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-diagnostics-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-ide-native-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-antlr-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-reporting-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-osgi-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-language-java-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-language-groovy-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-scala-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-resources-http-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-platform-play-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-ide-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-resources-gcs-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-maven-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-platform-jvm-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-testing-base-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-testing-jvm-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-build-init-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-test-kit-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-ivy-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-resources-sftp-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-signing-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-resources-s3-4.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.3-bin/452wx51oxqsia28686mgqhot6/gradle-4.3/lib/plugins/gradle-code-quality-4.3.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/batch" value="PREVIEW" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/keymanagement" value="PREVIEW" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/keymanagementbatch" value="PREVIEW" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/logging" value="PREVIEW" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/umb" value="PREVIEW" />
+        <entry key="$USER_HOME$/Optiva/UnifiedCharging-Platform-platform_vapc/umf" value="PREVIEW" />
+        <entry key="$USER_HOME$/crossblogs-java-se" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/model/MemberMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/util/HttpEntityHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/factory/TransactionFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/MemberRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/MemberServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/UserAlreadyExistsException.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/BookControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyIssued.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyIssuedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookAlreadyReturnedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TransactionNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.0.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/query/TopMembersSQLQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/InvalidTimeRangeException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TopMemberServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TooManyBooksIssuedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/TransactionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Member.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/MemberControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/factory/TransactionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/BookServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TopMemberDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TransactionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/TransactionControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TransactionServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/TransactionController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="excludeTargetFolder" value="false" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="*" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1920" />
+    <option name="y" value="-464" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>ActionScript specificJavaScript</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Lint</id>
+          </State>
+          <State>
+            <id>Batch Applications Issues</id>
+          </State>
+          <State>
+            <id>Flow type checkerJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Hibernate inspections</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Portability issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Struts</id>
+          </State>
+          <State>
+            <id>Struts 1Struts</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>Web Services</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JavaFX</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="changelog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cross-library-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cross-library-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="crossover" type="462c0819:PsiDirectoryNode" />
+              <item name="techtrial" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.crossover.techtrial.factory" />
+      <recent name="com.crossover.techtrial.service" />
+      <recent name="com.crossover.techtrial.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.crossover.techtrial.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.com.crossover.techtrial in cross-library-java_test">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MemberControllerTest.givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cross-library-java_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crossover.techtrial.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.crossover.techtrial.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.crossover.techtrial.controller.MemberControllerTest" />
+      <option name="METHOD_NAME" value="givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TopMemberServiceImplTest.givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cross-library-java_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crossover.techtrial.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.crossover.techtrial.service" />
+      <option name="MAIN_CLASS_NAME" value="com.crossover.techtrial.service.TopMemberServiceImplTest" />
+      <option name="METHOD_NAME" value="givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TransactionServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cross-library-java_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crossover.techtrial.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.crossover.techtrial.service" />
+      <option name="MAIN_CLASS_NAME" value="com.crossover.techtrial.service.TransactionServiceImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TransactionServiceImplTest.givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cross-library-java_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crossover.techtrial.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.crossover.techtrial.service" />
+      <option name="MAIN_CLASS_NAME" value="com.crossover.techtrial.service.TransactionServiceImplTest" />
+      <option name="METHOD_NAME" value="givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="com.crossover.techtrial in cross-library-java_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cross-library-java_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crossover.techtrial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.crossover.techtrial" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CrossLibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cross-library-java_main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.crossover.techtrial.CrossLibraryApplication" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CrossLibraryApplication" />
+      <item itemvalue="JUnit.com.crossover.techtrial in cross-library-java_test" />
+      <item itemvalue="JUnit.TransactionServiceImplTest" />
+      <item itemvalue="JUnit.TopMemberServiceImplTest.givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException" />
+      <item itemvalue="JUnit.TransactionServiceImplTest.givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException" />
+      <item itemvalue="JUnit.MemberControllerTest.givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.crossover.techtrial in cross-library-java_test" />
+        <item itemvalue="JUnit.MemberControllerTest.givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" />
+        <item itemvalue="JUnit.TransactionServiceImplTest.givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException" />
+        <item itemvalue="JUnit.TransactionServiceImplTest" />
+        <item itemvalue="JUnit.TopMemberServiceImplTest.givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f479d21-7ce5-4825-8e73-0475fb0e2b9a" name="Default" comment="" />
+      <created>1546948073571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546948073571</updated>
+      <workItem from="1546948076914" duration="39582000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TopMemberServiceImplTest_givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException - 2019.01.08 at 23h 13m 27s.xml">
+      <configuration name="TopMemberServiceImplTest.givenValidWhenGetTopMembersFromStartTimeToEndTimeThenException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_crossover_techtrial_in_cross-library-java_test - 2019.01.09 at 08h 49m 00s.xml">
+      <configuration name="com.crossover.techtrial in cross-library-java_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionServiceImplTest - 2019.01.09 at 09h 19m 45s.xml">
+      <configuration name="TransactionServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionServiceImplTest - 2019.01.09 at 09h 21m 58s.xml">
+      <configuration name="TransactionServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_crossover_techtrial_in_cross-library-java_test - 2019.01.09 at 09h 56m 31s.xml">
+      <configuration name="com.crossover.techtrial in cross-library-java_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_crossover_techtrial_in_cross-library-java_test - 2019.01.09 at 09h 58m 52s.xml">
+      <configuration name="com.crossover.techtrial in cross-library-java_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionServiceImplTest_givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException - 2019.01.09 at 09h 59m 15s.xml">
+      <configuration name="TransactionServiceImplTest.givenFiveBooksIssuedAndNotReturnedWhenIssueBookToMemberThenException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MemberControllerTest_givenInvalidTimeRangeWhenGetTopMembersThenBadRequest - 2019.01.09 at 09h 59m 53s.xml">
+      <configuration name="MemberControllerTest.givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MemberControllerTest_givenInvalidTimeRangeWhenGetTopMembersThenBadRequest - 2019.01.09 at 10h 03m 45s.xml">
+      <configuration name="MemberControllerTest.givenInvalidTimeRangeWhenGetTopMembersThenBadRequest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_crossover_techtrial_in_cross-library-java_test - 2019.01.09 at 10h 04m 38s.xml">
+      <configuration name="com.crossover.techtrial in cross-library-java_test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39582000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1920" y="-464" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50078124" side_tool="true" weight="0.32859176" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info id="Capture Tool" />
+      <window_info id="Designer" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" sideWeight="0.49921876" weight="0.32859176" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979655" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32960325" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info id="Image Layers" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="right" id="Quick Notes" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="TCPMON" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32960325" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.18802084" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info id="Web" side_tool="true" />
+      <window_info anchor="bottom" id="SonarLint" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960325" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="4179" column="34" selection-start-line="4179" selection-start-column="34" selection-end-line="4179" selection-end-column="34" />
+          <folding>
+            <element signature="e#167000#167001#0" expanded="true" />
+            <element signature="e#167065#167066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/UserAlreadyExistsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyIssuedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="76" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.6.RELEASE/80d2ad911e4381ea99237aa00332271f132b2eb3/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682">
+          <caret line="190" column="4" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TransactionNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/BookAlreadyReturnedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.0.6.RELEASE/14f837d78a638a79f51f1cd9dd8ff80733153530/spring-test-5.0.6.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunBeforeTestExecutionCallbacks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.6.RELEASE/80d2ad911e4381ea99237aa00332271f132b2eb3/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="731" selection-start-line="731" selection-end-line="731" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/2.0.2.RELEASE/52069c628c3bcb16473d528fbf24f76e9c0b902e/spring-boot-test-2.0.2.RELEASE-sources.jar!/org/springframework/boot/test/web/client/TestRestTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="814" selection-start-line="814" selection-end-line="814" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/query/TopMembersSQLQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#108#109#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/InvalidTimeRangeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="81" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/CrossLibraryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/TooManyBooksIssuedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="80" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="80" />
+          <folding>
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/4b714a5167580122e46ead3317ffcdcdbd67c5f0/validation-api-2.0.1.Final-sources.jar!/javax/validation/ConstraintViolationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="56" column="87" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/factory/TransactionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="93" column="79" selection-start-line="93" selection-start-column="79" selection-end-line="93" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/BookRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/MemberRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/repositories/TransactionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TopMemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/util/HttpEntityHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TopMemberServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/MemberServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/BookServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/factory/TransactionFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/MemberControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2130">
+          <caret line="144" column="97" selection-start-line="144" selection-start-column="97" selection-end-line="144" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/BookControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/MembershipStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/model/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="71" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TopMemberDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/dto/TransactionDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/controller/TransactionControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="62" column="106" selection-start-line="62" selection-start-column="106" selection-end-line="62" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/service/TransactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/crossover/techtrial/service/TransactionServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="186" column="35" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crossover/techtrial/controller/TransactionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.19541779" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>Unnamed</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="Unnamed" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

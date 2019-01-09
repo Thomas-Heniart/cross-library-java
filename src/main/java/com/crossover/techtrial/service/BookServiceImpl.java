@@ -1,46 +1,43 @@
 /**
- * 
+ *
  */
 package com.crossover.techtrial.service;
 
+import com.crossover.techtrial.exceptions.BookNotFoundException;
+import com.crossover.techtrial.model.Book;
+import com.crossover.techtrial.repositories.BookRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.crossover.techtrial.model.Book;
-import com.crossover.techtrial.repositories.BookRepository;
-import com.crossover.techtrial.repositories.TransactionRepository;
 
 /**
  * @author crossover
- *
  */
 @Service
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
 
-  @Autowired
-  BookRepository bookRepository;
-  
-  @Autowired
-  TransactionRepository transactionRepository;
-  
-  @Override
-  public List<Book> getAll() {
-    List<Book> personList = new ArrayList<>();
-    bookRepository.findAll().forEach(personList::add);
-    return personList;
-    
-  }
-  
-  public Book save(Book p) {
-    return bookRepository.save(p);
-  }
+    private BookRepository bookRepository;
 
-  @Override
-  public Book findById(Long bookId) {
-    Optional<Book> dbPerson = bookRepository.findById(bookId);
-    return dbPerson.orElse(null);
-  }
+    public BookServiceImpl(final BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 
+    @Override
+    public List<Book> getAll() {
+        final List<Book> personList = new ArrayList<>();
+        bookRepository.findAll().forEach(personList::add);
+        return personList;
+
+    }
+
+    public Book save(final Book p) {
+        return bookRepository.save(p);
+    }
+
+    @Override
+    public Book findById(final Long bookId) {
+        final Optional<Book> bookOptional = bookRepository.findById(bookId);
+        return bookOptional.orElseThrow(BookNotFoundException::new);
+    }
 }
