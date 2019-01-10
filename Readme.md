@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/Thomas-Heniart/cross-library-java/tree/master.svg?style=svg)](https://circleci.com/gh/Thomas-Heniart/cross-library-java/tree/master)
 
 # Project Assessment
 
