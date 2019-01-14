@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/Thomas-Heniart/cross-library-java/tree/master.svg?style=svg)](https://circleci.com/gh/Thomas-Heniart/cross-library-java/tree/master)
+[![codecov](https://codecov.io/gh/Thomas-Heniart/cross-library-java/branch/master/graph/badge.svg)](https://codecov.io/gh/Thomas-Heniart/cross-library-java)
 
 # Project Assessment
 
