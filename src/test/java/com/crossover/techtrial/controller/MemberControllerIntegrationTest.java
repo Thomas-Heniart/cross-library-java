@@ -37,7 +37,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class MemberControllerTest {
+public class MemberControllerIntegrationTest {
 
     private static final String GET_MEMBER_NOT_FOUND_URL = "/api/member/1111";
     private static final Long MEMBER_ID = 1L;

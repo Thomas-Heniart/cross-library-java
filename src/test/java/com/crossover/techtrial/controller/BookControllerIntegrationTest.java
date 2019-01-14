@@ -29,7 +29,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class BookControllerTest {
+public class BookControllerIntegrationTest {
 
     private static final String GET_BOOKS_URL = "/api/book";
     private static final String POST_BOOK_URL = "/api/book";
